@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AUR Flix</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav>
+  <h1 class="logo">AUR<span>Flix</span></h1> 
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="movies.html">Movies & Series</a></li>
+    <li><a href="trailers.html">Trailers</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Unlimited Movies, Series & Sports</h1>
+    <p>
+      Discover movies, watch trailers and book tickets with a smooth interactive experience.
+    </p>
+
+    <div class="hero-buttons">
+      <button onclick="openTrailer()">Watch Trailer</button>
+      <button onclick="location.href='booking.html'">Book Tickets</button>
+    </div>
+  </div>
+</section>
+
+<!-- TRAILER POPUP (YOUTUBE) -->
+<div id="trailerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeTrailer()">×</span>
+
+    <iframe
+      src="https://www.youtube.com/embed/b9EkMc79ZSU"
+      title="AUR Flix Trailer"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+</div>
+
+<!-- TRENDING SECTION -->
+<section class="section">
+  <h2>Trending Now</h2>
+
+  <div class="movies-wrapper">
+
+    <!-- LEFT ARROW -->
+    <button class="arrow left" onclick="scrollRowLeft('trendingRow')">‹</button>
+
+    <!-- MOVIE ROW -->
+    <div class="movies" id="trendingRow">
+      <img src="images/movie1.jpg" onclick="openDetails('strangerthings')" alt="Stranger Things">
+      <img src="images/movie19.jpg" onclick="openDetails('aliceinborderland')" alt="Alice in Borderland">
+      <img src="images/movie06.jpg" onclick="openDetails('loveuntangled')" alt="Love Untangled">
+      <img src="images/movie5.jpg" onclick="openDetails('wednesday')" alt="Wednesday">
+      <img src="images/movie08.jpg" onclick="openDetails('thegreatflood')" alt="The Great Flood">
+      <img src="images/movie05.jpg" onclick="openDetails('crew')" alt="Crew">
+      <img src="images/movie14.jpg" onclick="openDetails('sweethome')" alt="Sweet Home">
+      <img src="images/movie11.jpg" onclick="openDetails('thewagesoffear')" alt="The Wages of Fear">
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="arrow right" onclick="scrollRowRight('trendingRow')">›</button>
+
+  </div>
+</section>
+
+<!-- MOVIES -->
+<section class="section">
+  <h2>Movies</h2>
+
+  <div class="movies-wrapper">
+
+    <!-- LEFT ARROW -->
+    <button class="arrow left" onclick="scrollRowLeft('moviesRow')">‹</button>
+    <!-- MOVIE ROW -->
+    <div class="movies" id="moviesRow">
+      <img src="images/movie07.jpg" onclick="openDetails('killboksoon')" alt="Kill Boksoon">
+      <img src="images/movie01.jpg" onclick="openDetails('kpopdemonhunters')" alt="K pop Demon Hunters">
+      <img src="images/movie02.jpeg" onclick="openDetails('wakeupdeadman')" alt="Wake up Dead Man">
+      <img src="images/movie03.jpg" onclick="openDetails('saiyaara')" alt="Saiyaara">
+      <img src="images/movie15.jpg" onclick="openDetails('venom')" alt="Venom">
+      <img src="images/movie08.jpg" onclick="openDetails('thegreatflood')" alt="The Great Flood">
+      <img src="images/movie20.jpg" onclick="openDetails('manvsbee')" alt="Man Vs Bee">
+      <img src="images/movie21.jpg" onclick="openDetails('spiderman')" alt="Spiderman">
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="arrow right" onclick="scrollRowRight('moviesRow')">›</button>
+
+  </div>
+</section>
+
+<!-- SERIES -->
+<section class="section">
+  <h2>SERIES</h2>
+
+  <div class="movies-wrapper">
+
+    <!-- LEFT ARROW -->
+    <button class="arrow left" onclick="scrollRowLeft('seriesRow')">‹</button>
+
+    <!-- MOVIE ROW -->
+    <div class="movies" id="seriesRow">
+      <img src="images/movie7.jpg" onclick="openDetails('squidgame')" alt="Squid Game">
+      <img src="images/movie4.jpg" onclick="openDetails('allofusaredead')" alt="All of us are Dead">
+      <img src="images/movie10.jpg" onclick="openDetails('thegooddoctor')" alt="The Good Doctor">
+      <img src="images/movie09.jpg" onclick="openDetails('happiness')" alt="Happiness">
+      <img src="images/movie17.jpg" onclick="openDetails('hellbound')" alt="Hellbound">
+      <img src="images/movie16.jpg" onclick="openDetails('friends')" alt="Friends">
+      <img src="images/movie23.jpg" onclick="openDetails('parasyte')" alt="Parasyte">
+      <img src="images/movie6 (2).jpg" onclick="openDetails('thekapilsharmashow')" alt="The Kapil Sharma Show">
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="arrow right" onclick="scrollRowRight('seriesRow')">›</button>
+
+  </div>
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <div>🎬 HD Streaming Experience</div>
+  <div>🎟 Easy & Secure Ticket Booking</div>
+  <div>🏏 Movies, Series & Sports in One Place</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 AUR Flix | ICT Project
+</footer>
+
+<!-- JS -->
+<script src="script.js/script.js"></script>
+
+</body>
+</html>
