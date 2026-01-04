@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies & Series</title>
+  
+  <!-- ✅ CORRECT CSS PATH -->
+   <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="section details" id="detailsSection">
+  <!-- Content will load here -->
+</section>
+
+<script>
+const data = {
+  strangerthings: {
+    title: "Stranger Things",
+    image: "images/a1.jpg",
+    desc: "A group of young friends in 1980s Indiana uncover supernatural mysteries and secret government experiments when one of their own mysteriously disappears. Their search leads them to a parallel dimension called the Upside Down, filled with terrifying creatures and dark forces. As they battle monsters and uncover conspiracies, they discover that their small town holds dangers far beyond imagination.",
+    seasons: "5 Seasons Available",
+    trailer: "https://www.youtube.com/embed/AfQ13jsLDms"
+  },
+
+  aliceinborderland: {
+    title: "Alice in Borderland",
+    image: "images/a2.jpg",
+    desc: "A gamer and his friends find themselves in a deserted Tokyo where they must compete in dangerous games to survive. Each game tests their physical and mental limits, with failure meaning instant death. As they search for answers about this mysterious world, they uncover dark secrets about the deadly competition.",
+    seasons: "3 Seasons Available",
+    trailer: "https://www.youtube.com/embed/_8p6YkEPVco"
+  },
+
+  loveuntangled: {
+    title: "Love Untangled",
+    image: "images/a3.jpg",
+    desc: "A nostalgic Korean romance set in 1998 where high school students navigate first love, friendship, and the complexities of youth. The series follows teenagers as they experience the bittersweet emotions of growing up during a simpler time. Through heartfelt connections and youthful challenges, they discover what it means to truly care for someone.",
+    seasons: "1 Season Available",
+    trailer: "https://www.youtube.com/embed/0HwDE0HXbqc"
+  },
+
+  wednesday: {
+    title: "Wednesday",
+    image: "images/a4.jpg",
+    desc: "Wednesday Addams attends Nevermore Academy, a school for outcasts, where she attempts to master her emerging psychic abilities. While navigating new friendships and rivalries, she investigates a mysterious monster terrorizing the town. She also uncovers dark secrets connected to her parents' past and a sinister conspiracy.",
+    seasons: "2 Seasons Available",
+    trailer: "https://www.youtube.com/embed/03u4xyj0TH4"
+  },
+
+  thegreatflood: {
+    title: "The Great Flood",
+    image: "images/a5.jpg",
+    desc: "A catastrophic flooding disaster strikes, forcing people to fight for survival as water levels rise rapidly. Families and strangers must work together to escape the deadly deluge and reach higher ground. Amidst the chaos, they face difficult choices between saving themselves and helping others.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/ErWfGyLp5h8"
+  },
+
+  crew: {
+    title: "Crew",
+    image: "images/a6.jpg",
+    desc: "Three ambitious air hostesses working for a failing airline find themselves caught in a financial crisis. When they discover a way to make quick money through a risky gold smuggling scheme, they take the opportunity. Their adventure turns into a wild ride filled with comedy, danger, and unexpected challenges.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/LH6sHR86t-M"
+  },
+
+  sweethome: {
+    title: "Sweet Home",
+    image: "images/a7.jpg",
+    desc: "A reclusive high school student and his apartment building neighbors must survive as humans begin transforming into monsters. Each person's transformation is tied to their deepest desires and personal demons. Together, they fight to stay human while battling terrifying creatures and their own inner darkness.",
+    seasons: "3 Seasons Available",
+    trailer: "https://www.youtube.com/embed/vFg5YGAORhU"
+  },
+
+  thewagesoffear: {
+    title: "The Wages of Fear",
+    image: "images/a8.jpg",
+    desc: "Desperate men in a remote location are offered a fortune to transport highly volatile nitroglycerin across treacherous terrain. Every bump and turn could trigger a deadly explosion as they navigate dangerous roads and extreme conditions. Tension mounts as greed, fear, and survival instincts clash during their perilous journey.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/9SX-jF6dTPU"
+  },
+
+    killboksoon: {
+    title: "Kill Boksoon",
+    image: "images/a9.jpg",
+    desc: "A legendary assassin and single mother struggles to balance her dangerous profession with raising her teenage daughter. When her contract with her crime syndicate comes up for renewal, she faces an impossible choice between her career and family. As tensions escalate, she must confront enemies both professional and personal in a deadly showdown.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/70e5RjgkHjU"
+  },
+
+  kpopdemonhunters: {
+    title: "K pop Demon Hunters",
+    image: "images/a10.jpg",
+    desc: "A K-pop girl group discovers they are actually demon hunters destined to protect the world from supernatural threats. Balancing their celebrity lives with secret battles against evil forces, they must master their powers while maintaining their pop star image. Music becomes their weapon as they fight demons and navigate the pressures of fame.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/3JTVQTk36R8"
+  },
+
+  wakeupdeadman: {
+    title: "Wake up Dead Man",
+    image: "images/a11.jpg",
+    desc: "Detective Benoit Blanc returns for another twisted murder mystery filled with eccentric suspects and hidden motives. As he unravels clues and navigates a web of lies, unexpected revelations emerge about the victim's death. With his signature Southern charm and brilliant deduction, Blanc pieces together the truth in this latest whodunit adventure.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/0hc8yz5-d5Y"
+  },
+
+  saiyaara: {
+    title: "Saaiyara",
+    image: "images/a12.jpg",
+    desc: "A passionate love story unfolds between two individuals from different backgrounds who are drawn together by fate. As their romance deepens, they must overcome societal expectations and personal challenges that threaten to tear them apart. Their journey tests the strength of their bond and their willingness to fight for love against all odds.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/GagxSlo253M"
+  },
+
+  venom: {
+    title: "Venom",
+    image: "images/a13.jpg",
+    desc: "Eddie Brock and his alien symbiote Venom face their most dangerous threat yet as they become targets of both their own worlds. On the run and hunted by enemies, they must make devastating choices that will test their partnership. In this final chapter, Eddie and Venom confront their destiny in an epic battle for survival.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/u9Mv98Gr5pY"
+  },
+
+  thegreatflood: {
+    title: "The Great Flood",
+    image: "images/a5.jpg",
+    desc: "A catastrophic flooding disaster strikes, forcing people to fight for survival as water levels rise rapidly. Families and strangers must work together to escape the deadly deluge and reach higher ground. Amidst the chaos, they face difficult choices between saving themselves and helping others.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/ErWfGyLp5h8"
+  },
+
+  manvsbee: {
+    title: "Man Vs Bee",
+    image: "images/a14.jpg",
+    desc: "A bumbling housesitter is tasked with looking after a luxurious mansion, but his simple job turns into absolute chaos when a bee enters the home. His increasingly desperate and destructive attempts to get rid of the bee result in catastrophic damage to the expensive property. What starts as a minor annoyance escalates into an all-out war between man and insect.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/YQ1vN_91KO0"
+  },
+
+  spiderman: {
+    title: "Spiderman",
+    image: "images/a15.jpg",
+    desc: "Peter Parker's identity as Spider-Man is revealed to the world, destroying his normal life and putting his loved ones at risk. Seeking help from Doctor Strange to reverse this, a spell goes wrong and pulls villains from across the multiverse into his world. Peter must face iconic foes while making heartbreaking sacrifices to save reality and learn what it truly means to be a hero.",
+    seasons: "1 Movie Available",
+    trailer: "https://www.youtube.com/embed/JfVOs4VSpmA"
+  },
+
+  squidgame: {
+    title: "Squid Game",
+    image: "images/a16.jpg",
+    desc: "Hundreds of desperate, debt-ridden people accept a mysterious invitation to compete in children's games for a massive cash prize. As the deadly competition unfolds, they realize that losing means death, and only one person can survive to claim the fortune. Faced with moral dilemmas and brutal eliminations, players must decide how far they'll go to win.",
+    seasons: "3 Seasons Available",
+    trailer: "https://www.youtube.com/embed/zgGTVaG2UiQ"
+  },
+
+  allofusaredead: {
+    title: "All of us are Dead",
+    image: "images/a17.jpg",
+    desc: "A zombie virus outbreak traps students inside their high school as infected classmates turn into bloodthirsty monsters. The survivors must navigate the chaos, fighting for their lives while dealing with betrayal, sacrifice, and impossible choices. As they struggle to escape, they uncover the dark origins of the virus while the outside world descends into apocalyptic madness.",
+    seasons: "1 Season Available",
+    trailer: "https://www.youtube.com/embed/IN5TD4VRcSM"
+  },
+
+  thegooddoctor: {
+    title: "The Good Doctor",
+    image: "images/a18.jpg",
+    desc: "A young surgical resident with autism and savant syndrome joins a prestigious hospital's surgical unit. Despite facing skepticism and prejudice from colleagues, his extraordinary medical brilliance and unique perspective save lives in remarkable ways. Through challenging cases and personal growth, he proves that being different can be his greatest strength in medicine.",
+    seasons: "7 Seasons Available",
+    trailer: "https://www.youtube.com/embed/XD6Vp0mhkNs"
+  },
+
+  happiness: {
+    title: "Happiness",
+    image: "images/a19.jpg",
+    desc: "A new infectious disease turns people into bloodthirsty monsters, and residents of a high-rise apartment building find themselves quarantined inside. As the virus spreads and supplies dwindle, neighbors turn against each other, revealing humanity's dark side during crisis. A detective and his fake-marriage partner must survive the outbreak while battling both infected residents and human greed.",
+    seasons: "1 Season Available",
+    trailer: "https://www.youtube.com/embed/gqhUlldiLEo"
+  },
+
+  hellbound: {
+    title: "Hellbound",
+    image: "images/a20.jpg",
+    desc: "Supernatural beings suddenly appear to condemn people to hell, dragging them away in brutal public executions at predetermined times. As society descends into chaos and fear, a mysterious religious cult rises to power claiming divine justice is at work. A detective, a lawyer, and others seek the truth behind these horrifying phenomena while questioning faith, morality, and human nature.",
+    seasons: "2 Seasons Available",
+    trailer: "https://www.youtube.com/embed/fqM-DRcCNbM"
+  },
+
+  friends: {
+    title: "Friends",
+    image: "images/a21.jpg",
+    desc: "Six friends navigate life, love, and careers in New York City while supporting each other through every triumph and disaster. From Monica's apartment, they share endless laughs, romantic entanglements, and unforgettable moments that define their twenties and thirties. Through breakups, marriages, career changes, and new beginnings, their unbreakable bond proves that friends can become family.",
+    seasons: "10 Seasons Available",
+    trailer: "https://www.youtube.com/embed/RasWhgd4vao"
+  },
+
+  parasyte: {
+    title: "Parasyte",
+    image: "images/a22.jpg",
+    desc: "Alien parasites invade Earth, taking over human hosts to create deadly human-monster hybrids. When a young woman becomes infected but manages to coexist with her parasite, she finds herself caught between humanity and the alien threat. As a special task force hunts the parasites, she must navigate a dangerous grey area where survival means choosing sides in an escalating war.",
+    seasons: "1 Season Available",
+    trailer: "https://www.youtube.com/embed/maIGHqJB6aQ"
+  },
+
+  thekapilsharmashow: {
+    title: "The Kapil Sharma Show",
+    image: "images/a23.jpg",
+    desc: "India's beloved comedian Kapil Sharma hosts a hilarious variety show featuring celebrity guests, comedy sketches, and entertaining conversations. With his talented ensemble cast creating memorable characters, the show delivers non-stop laughter through witty banter and playful roasting of Bollywood stars. Each episode blends comedy, music, and heartwarming moments as guests promote their latest projects while having fun.",
+    seasons: "2 Seasons Available",
+    trailer: "https://www.youtube.com/embed/bftjfqS3v6k"
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const show = params.get("show");
+const content = data[show];
+
+if (content) {
+  document.getElementById("detailsSection").innerHTML = `
+    <img src="${content.image}">
+    <div class="details-info">
+      <h2>${content.title}</h2>
+      <p>${content.desc}</p>
+
+      <div class="details-buttons">
+        <button onclick="alert('${content.seasons}')">
+          Seasons
+        </button>
+
+        <button onclick="window.location.href='booking.html'">
+          Book Tickets
+        </button>
+      </div>
+
+      <iframe
+        src="${content.trailer}"
+        allowfullscreen>
+      </iframe>
+    </div>
+  `;
+}
+</script>
+
+<footer>
+  © 2026 AUR Flix | ICT Project
+</footer>
+
+</body>
+</html>
+
