@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Tickets | AUR Flix</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="booking-body">
+
+<!-- NAVBAR (same as index) -->
+<nav>
+  <h1 class="logo">AUR<span>Flix</span></h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="movies.html">Movies & Series</a></li>
+    <li><a href="trailers.html">Trailers</a></li>
+    <li><a href="booking.html" class="active">Booking</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- BOOKING FORM -->
+<div class="booking-container">
+  <h2>Movie Ticket Booking</h2>
+
+  <form class="booking-form">
+
+    <input type="text" placeholder="Full Name" required>
+
+    <!-- MOVIE -->
+    <select required>
+      <option value="">Select Movie</option>
+      <option>Stranger Things</option>
+      <option>Alice in Borderland</option>
+      <option>Wednesday</option>
+      <option>Venom</option>
+      <option>Spiderman</option>
+      <option>Saiyaara</option>
+      <option>Kill Boksoon</option>
+      <option>Sweet Home</option>
+    </select>
+
+    <!-- CITY -->
+    <select required>
+      <option value="">Select City</option>
+      <option>Karachi</option>
+      <option>Lahore</option>
+      <option>Islamabad</option>
+      <option>Rawalpindi</option>
+      <option>Faisalabad</option>
+    </select>
+
+    <!-- CINEMA -->
+    <select required>
+      <option value="">Select Cinema</option>
+      <option>Cinepax</option>
+      <option>Nueplex</option>
+      <option>Centaurus Cinema</option>
+      <option>Universal Cinema</option>
+    </select>
+
+    <!-- DATE & TIME -->
+    <input type="date" required>
+
+    <select required>
+      <option value="">Select Time</option>
+      <option>12:00 PM</option>
+      <option>03:00 PM</option>
+      <option>06:00 PM</option>
+      <option>09:00 PM</option>
+    </select>
+
+    <!-- TICKETS -->
+    <input type="number" placeholder="Total Tickets" min="1" required>
+
+    <input type="number" placeholder="Male" min="0">
+    <input type="number" placeholder="Female" min="0">
+    <input type="number" placeholder="Children (Below 10)" min="0">
+
+    <!-- COMMENTS -->
+    <textarea placeholder="Additional Comments"></textarea>
+
+    <button type="submit">Confirm Booking</button>
+
+  </form>
+</div>
+
+<footer>
+  © 2026 AUR Flix | ICT Project
+</footer>
+
+</body>
+</html>
